@@ -33,5 +33,10 @@ body {
 }
 .links {
     color: #fff;
-    font-weight: 400;
+    font-weight: 300;
+    background-color: lightblue;
+    text-transform: lowercase;
+}
+.links a{
+    color: #fff;
 }
