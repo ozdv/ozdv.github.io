@@ -6,7 +6,13 @@ body {
 }
 body {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: lightblue;
+    background: linear-gradient(
+    to right, 
+    #ff9e2c 0%, 
+    #ff9e2c 50%, 
+    #b6701e 50%, 
+    #b6701e 100%
+  );
 }
 .wrapper {
     display: table;
