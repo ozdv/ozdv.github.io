@@ -46,15 +46,15 @@ body {
 }
 .social-media-icons a:hover .fa-linkedin,
 .social-media-icons a:active .fa-linkedin {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .social-media-icons a:hover .fa-envelope-o,
 .social-media-icons a:active .fa-envelope-o {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .social-media-icons a:hover .fa-github,
 .social-media-icons a:active .fa-github {
-    opacity: 0.7;
+    opacity: 0.5;
 }
