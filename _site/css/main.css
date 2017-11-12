@@ -33,27 +33,21 @@ body {
 }
 .social-media-icons {
     font-size: 15px;
-    padding-bottom: 10px;
 }
-
 .social-media-icons a {
     color: white;
 }
-
 .social-media-icons i {
-    padding: 14px 10px;
+    padding: 10px;
 }
-
 .social-media-icons a:hover .fa-linkedin,
 .social-media-icons a:active .fa-linkedin {
     color: #0976b4;
 }
-
 .social-media-icons a:hover .fa-envelope-o,
 .social-media-icons a:active .fa-envelope-o {
     color: #ffa930;
 }
-
 .social-media-icons a:hover .fa-github,
 .social-media-icons a:active .fa-github {
     color: #6cc644;
