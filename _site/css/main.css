@@ -6,12 +6,7 @@ body {
 }
 body {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: linear-gradient(
-    to right, 
-    #ff9e2c 0%, 
-    #ff9e2c 50%, 
-    #b6701e 50%, 
-    #b6701e 100%
+    background-color: #292929;
   );
 }
 .wrapper {
@@ -36,11 +31,31 @@ body {
     color: #fff;
     font-weight: 300;
 }
-.links {
-    color: #fff;
-    font-weight: 300;
-    text-transform: lowercase;
+.social-media-icons {
+    font-size: 15px;
+    padding-bottom: 10px;
 }
-.links a{
-    color: #fff;
+
+.social-media-icons a {
+    color: white;
 }
+
+.social-media-icons i {
+    padding: 14px 10px;
+}
+
+.social-media-icons a:hover .fa-linkedin,
+.social-media-icons a:active .fa-linkedin {
+    color: #0976b4;
+}
+
+.social-media-icons a:hover .fa-envelope-o,
+.social-media-icons a:active .fa-envelope-o {
+    color: #ffa930;
+}
+
+.social-media-icons a:hover .fa-github,
+.social-media-icons a:active .fa-github {
+    color: #6cc644;
+}
+
