@@ -29,13 +29,13 @@ class Bg {
 	}
 	draw(){
 		this.ctx.rect(0, 0, this.c.width, this.c.height);
-		this.ctx.fillStyle = '#252839';
+		this.ctx.fillStyle = '#292929';
 		this.ctx.fill();
 		
 		this.drawDots();
 	}
 	drawDots(){
-		this.ctx.fillStyle = '#1b1e2b';
+		this.ctx.fillStyle = '#212121';
 		this.dots.forEach((dot, i)=>{
 			this.ctx.beginPath();
 			this.ctx.arc(dot.x, dot.y, 2, 0, Math.PI*2);
@@ -56,7 +56,7 @@ class Bg {
 					this.ctx.beginPath();
 					this.ctx.moveTo(dot.x, dot.y);
 					this.ctx.lineTo(dot2.x, dot2.y);
-					this.ctx.strokeStyle = '#1b1e2b';
+					this.ctx.strokeStyle = '#212121';
 					this.ctx.stroke();
 					this.ctx.closePath();
 				}
@@ -82,5 +82,4 @@ class Bg {
 }
 $(document).ready(()=>{
 	new Bg();
-	new Interwebs();
 });
