@@ -17,7 +17,7 @@ body {
     height: 200px;
     border-radius: 5px;
     overflow: hidden;
-        z-index: 2;
+    z-index: 2;
 }
 .main {
     display: table-cel;
@@ -25,13 +25,13 @@ body {
     text-align: center;
 }
 h1 {
-      font-weight: 100;
+    font-weight: 100;
     font-size: 4.5em; 
     margin: 0px;
     padding: 0px;
 }
 p {
-      font-weight: 100;
+    font-weight: 100;
 }
 .social-media-icons {
     font-size: 20px;
@@ -52,5 +52,9 @@ p {
 }
 .social-media-icons a:hover .fa-github,
 .social-media-icons a:active .fa-github {
-    color: #6cc644;
+    color: #4d2772;
+}
+.social-media-icons a:hover .fa-twitter,
+.social-media-icons a:active .fa-twitter {
+    color: #00aced; 
 }
