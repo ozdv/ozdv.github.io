@@ -7,7 +7,7 @@
 		<link href="../resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="/css/about.css">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
 		<canvas id="bg-canvas"></canvas>
@@ -24,7 +24,8 @@
 			</div><!-- /.main -->
 		</div><!-- /.window -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script>//Author: Lewi - @Lewitje
+		<script> 
+			//Author: Lewi - @Lewitje
 			class Bg {
 				constructor(){
 					this.setup();
@@ -62,7 +63,7 @@
 					this.drawDots();
 				}
 				drawDots(){
-					this.ctx.fillStyle = '#212121';
+					this.ctx.fillStyle = '#fff';
 					this.dots.forEach((dot, i)=>{
 						this.ctx.beginPath();
 						this.ctx.arc(dot.x, dot.y, 2, 0, Math.PI*2);
@@ -78,12 +79,12 @@
 						if(i !== i2) {
 							var distanceX = Math.abs(dot.x - dot2.x);
 							var distanceY = Math.abs(dot.y - dot2.y);				
-							var threshold = 60;
+							var threshold = 100;
 							if(distanceX < threshold && distanceY < threshold) {
 								this.ctx.beginPath();
 								this.ctx.moveTo(dot.x, dot.y);
 								this.ctx.lineTo(dot2.x, dot2.y);
-								this.ctx.strokeStyle = '#212121';
+								this.ctx.strokeStyle = '#666666';
 								this.ctx.stroke();
 								this.ctx.closePath();
 							}
@@ -111,8 +112,5 @@
 				new Bg();
 			});
 		</script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	</body>
 </html>
