@@ -47,20 +47,16 @@ a:hover {
     margin-left: 25px;
     margin-right: 25px;
 }
-.social-media-icons a:hover .fa-linkedin,
-.social-media-icons a:active .fa-linkedin {
+.social-media-icons a:hover .fa-linkedin {
     color: #0976b4;
 }
-.social-media-icons a:hover .fa-envelope-o,
-.social-media-icons a:active .fa-envelope-o {
+.social-media-icons a:hover .fa-envelope-o {
     color: #ffa930;
 }
-.social-media-icons a:hover .fa-github,
-.social-media-icons a:active .fa-github {
+.social-media-icons a:hover .fa-github {
     color: #9967cb;
 }
-.social-media-icons a:hover .fa-twitter,
-.social-media-icons a:active .fa-twitter {
+.social-media-icons a:hover .fa-twitter {
     color: #00aced; 
 }
 
