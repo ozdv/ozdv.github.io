@@ -38,6 +38,9 @@ a:link {
 a:hover {
     color: white;
 }
+a:visited {
+    color: white;
+}
 .social-media-icons {
     font-size: 20px;
     margin-top: 15px;
