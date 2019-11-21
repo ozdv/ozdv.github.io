@@ -31,6 +31,13 @@ h1 {
 p {
     font-weight: 100;
 }
+
+a:link {
+    color: white;
+}
+a:hover {
+    color: white;
+}
 .social-media-icons {
     font-size: 20px;
     margin-top: 15px;
@@ -55,13 +62,5 @@ p {
 .social-media-icons a:hover .fa-twitter,
 .social-media-icons a:active .fa-twitter {
     color: #00aced; 
-}
-
-a:link {
-    color: white;
-}
-
-a:hover {
-    color: #666666;
 }
 
