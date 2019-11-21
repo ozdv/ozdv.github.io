@@ -1,1 +1,108 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="description" content = "Personal website">
+		<meta name="author" content="Cam Davies">
+		<title>Cam Davies</title>
+		<link href="../resources/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+	</head>
+
+	<body>
+		<canvas id="bg-canvas"></canvas>
+		<div class="window">
+			<div class="main">
+			</div><!-- /.main -->
+		</div><!-- /.window -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script> 
+			class Bg {
+				constructor(){
+					this.setup();
+					this.tick();
+				}
+				setup(){
+					this.c = $('#bg-canvas')[0];
+					this.ctx = this.c.getContext('2d');
+					
+					this.c.width = window.innerWidth;
+					this.c.height = window.innerHeight;
+					
+					this.frame = 0;
+					this.dots = [];
+					
+					for(var i = 0; i < 100; i++){
+						this.dots.push({
+							x: this.c.width * Math.random(),
+							y: this.c.height * Math.random(),
+							v: Math.random(),
+							d: 360 * Math.random()
+						});
+					}
+				}
+				tick() {
+					this.frame += 1;
+					this.draw();
+					requestAnimationFrame(this.tick.bind(this));
+				}
+				draw(){
+					this.ctx.rect(0, 0, this.c.width, this.c.height);
+					this.ctx.fillStyle = '#292929';
+					this.ctx.fill();
+					
+					this.drawDots();
+				}
+				drawDots(){
+					this.ctx.fillStyle = '#666666';
+					this.dots.forEach((dot, i)=>{
+						this.ctx.beginPath();
+						this.ctx.arc(dot.x, dot.y, 2, 0, Math.PI*2);
+						this.ctx.fill();
+						this.ctx.closePath();
+						
+						this.drawLinks(dot, i);
+						this.moveDot(dot);
+					});
+				}
+				drawLinks(dot, i) {
+					this.dots.forEach((dot2, i2)=>{
+						if(i !== i2) {
+							var distanceX = Math.abs(dot.x - dot2.x);
+							var distanceY = Math.abs(dot.y - dot2.y);				
+							var threshold = 100;
+							if(distanceX < threshold && distanceY < threshold) {
+								this.ctx.beginPath();
+								this.ctx.moveTo(dot.x, dot.y);
+								this.ctx.lineTo(dot2.x, dot2.y);
+								this.ctx.strokeStyle = '#666666';
+								this.ctx.stroke();
+								this.ctx.closePath();
+							}
+						}
+					});
+				}
+				moveDot(dot){
+					var flip = false;
+					dot.x += Math.cos(dot.d) * dot.v;
+					dot.y += Math.sin(dot.d) * dot.v;
+					
+					if(dot.x <= 0 || dot.y <= 0 || dot.y >= this.c.height || dot.x >= this.c.width) {
+						flip = true;
+					}
+					if(flip) {
+						if(dot.d < 180) {
+							dot.d -= 45;
+						} else {
+							dot.d += 45;
+						}
+					}
+				}
+			}
+			$(document).ready(()=>{
+				new Bg();
+			});
+		</script>
+	</body>
+</html>
